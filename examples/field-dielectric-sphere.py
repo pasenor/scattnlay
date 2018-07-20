@@ -27,6 +27,7 @@
 
 # This test case calculates the electric field in the 
 # small dielectric sphere.
+from __future__ import print_function
 import scattnlay
 import os
 from scattnlay import fieldnlay
@@ -79,7 +80,7 @@ def test_sphere():
     m = np.ones((1, 1), dtype = np.complex128)
     m[0, 0] = 1.0
     delta_m = 0.712
-    for n in xrange(0,15):
+    for n in range(0,15):
         m[0,0] = 1.0 + delta_m*n
         print("Testing index m="+str(m[0,0]))
         if not is_test_all_coord_passed(x,m):

@@ -82,8 +82,8 @@ m[0] = index_Si/nm
 m[1] = index_Ag/nm
 m[2] = index_Si/nm
 
-print "x =", x
-print "m =", m
+print("x =", x)
+print("m =", m)
 
 npts = 501
 factor=2.2
@@ -119,7 +119,7 @@ plt.savefig(comment+"-R"+str(int(round(x[-1]*WL/2.0/np.pi)))+"-"+crossplane+"-"
 
 plt.draw()
 
-#    plt.show()
+plt.show()
 
 plt.clf()
 plt.close()

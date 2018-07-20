@@ -64,11 +64,12 @@ x[0, 0] = radius*twopi
 m = np.ones((1, 1), dtype = np.complex128)
 m[0, 0] = n1/nm
 
-nptsx = extent*resolution
-nptsy = extent*resolution
+nptsx = np.int32(extent*resolution)
+nptsy = np.int32(extent*resolution)
 
 scanx = np.linspace(-extent/2, extent/2, nptsx, endpoint=True)*twopi
 scany = np.linspace(-extent/2, extent/2, nptsy, endpoint=True)*twopi
+
 
 coordX, coordY = np.meshgrid(scanx, scany)
 coordX.resize(nptsx*nptsy)

@@ -48,6 +48,8 @@
 # v3/Vt=0.044
 # v4/Vt=0.3666
 
+from __future__ import print_function
+
 from scattnlay import scattcoeffs
 import numpy as np
 
@@ -91,5 +93,5 @@ try:
     plt.show()
 finally:
     np.savetxt("scattcoeffs.txt", result, fmt = "%.5f")
-    print result
+    print(result)
 

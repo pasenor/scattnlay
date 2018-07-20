@@ -27,12 +27,13 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # Several functions to plot field and streamlines (power flow lines).
+from builtins import range
 
 import scattnlay
 from scattnlay import fieldnlay
 from scattnlay import scattnlay
 import numpy as np
-import cmath
+
 
 
 def unit_vector(vector):
@@ -103,7 +104,7 @@ def GetFlow3D(x0, y0, z0, max_length, max_angle, x, m, pl):
             Ec, Hc = E[0, 0, :], H[0, 0, :]
             Eth = max(np.absolute(Ec)) / 1e10
             Hth = max(np.absolute(Hc)) / 1e10
-            for i in xrange(0, len(Ec)):
+            for i in range(0, len(Ec)):
                 if abs(Ec[i]) < Eth:
                     Ec[i] = 0 + 0j
                 if abs(Hc[i]) < Hth:

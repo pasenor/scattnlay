@@ -33,6 +33,8 @@
 # where maximum of the surface plasmon resonance (and,
 # hence, of electric field) is expected.
 
+from __future__ import print_function
+
 from scattnlay import fieldnlay
 import numpy as np
 
@@ -45,8 +47,8 @@ x[0, 0] = 5.0
 m = np.ones((1, 1), dtype = np.complex128)
 m[0, 0] = n1/nm
 
-print "x =", x
-print "m =", m
+print("x =", x)
+print("m =", m)
 
 npts = 1001
 
@@ -125,6 +127,6 @@ try:
     plt.close()
 finally:
     np.savetxt("field-silica.txt", result, fmt = "%.5f")
-    print result
+    print(result)
 
 

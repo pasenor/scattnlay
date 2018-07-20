@@ -35,7 +35,7 @@ import scattnlay
 from scattnlay import fieldnlay
 from scattnlay import scattnlay
 import numpy as np
-import cmath
+
 
 epsilon_Si = 13.64 + 0.047j
 epsilon_Ag = -28.05 + 1.525j
@@ -78,8 +78,8 @@ m[0, 0] = index_Si/nm
 m[0, 1] = index_Ag/nm
 m[0, 2] = index_Si/nm
 
-print "x =", x
-print "m =", m
+print("x =", x)
+print("m =", m)
 
 npts = 281
 
@@ -217,6 +217,6 @@ try:
     plt.close()
 finally:
     np.savetxt("field.txt", result, fmt = "%.5f")
-    print result
+    print(result)
 
 

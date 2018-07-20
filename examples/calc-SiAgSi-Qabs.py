@@ -152,8 +152,8 @@ comment='Si-flow'
 x, m, WL = SetXM(design)
 
 WL_units='nm'
-print "x =", x[-1]
-print "m =", m
+print("x =", x[-1])
+print("m =", m)
 npts = 501
 factor=2.1
 flow_total = 39
@@ -182,7 +182,7 @@ plt.savefig(comment+"-R"+str(int(round(x[-1]*WL/2.0/np.pi)))+"-"+crossplane+"-"
 
 plt.draw()
 
-#    plt.show()
+plt.show()
 
 plt.clf()
 plt.close()

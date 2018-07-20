@@ -56,7 +56,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     for dirname in args.dirnames:
-        print "Calculating spectra for data file(s) in dir '%s'..." % (dirname)
+        print("Calculating spectra for data file(s) in dir '%s'..." % (dirname))
 
         wl = args.wl # cm
         if (args.rad is None):
@@ -78,11 +78,11 @@ if __name__ == '__main__':
 
         Rt = Rs + tc # cm
 
-        print "Wl = %.2f, Rs = %.2f, tc = %.2f, Rt = %.2f" % (wl, Rs, tc, Rt)
+        print("Wl = %.2f, Rs = %.2f, tc = %.2f, Rt = %.2f" % (wl, Rs, tc, Rt))
 
         ms = 1.0 + 40.0j
         for i, fname in enumerate(files):
-            print "Calculating spectra for file '%s'..." % (fname)
+            print("Calculating spectra for file '%s'..." % (fname))
 
             basename = os.path.splitext(fname)[0]
 
@@ -102,7 +102,7 @@ if __name__ == '__main__':
             print(x,m)
 
             factor = 2.91*x[0]/x[-1]
-            print factor
+            print(factor)
             comment='PEC-'+basename
             WL_units=''
             #flow_total = 39
@@ -120,8 +120,8 @@ if __name__ == '__main__':
             
             field_to_plot='angleEx'
             #field_to_plot='angleHy'
-            print "x =", x
-            print "m =", m
+            print( "x =", x)
+            print("m =", m)
 
             import matplotlib.pyplot as plt
             plt.rcParams.update({'font.size': 16})
@@ -145,5 +145,4 @@ if __name__ == '__main__':
             plt.close()
 
 
-        print "Done!!"
-
+        print("Done!!")

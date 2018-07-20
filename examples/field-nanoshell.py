@@ -33,6 +33,8 @@
 # where maximum of the surface plasmon resonance (and,
 # hence, of electric field) is expected.
 
+from __future__ import print_function
+
 from scattnlay import fieldnlay
 import numpy as np
 import time
@@ -49,8 +51,8 @@ m = np.ones((1, 2), dtype = np.complex128)
 m[0, 0] = n1/nm
 m[0, 1] = n2/nm
 
-print "x =", x
-print "m =", m
+print("x =", x)
+print("m =", m)
 
 npts = 501
 
@@ -68,7 +70,7 @@ start_time = time.time()
 terms, E, H = fieldnlay(x, m, coord)
 
 elapsed_time = time.time() - start_time
-print "Time: ", elapsed_time
+print("Time: ", elapsed_time)
 
 Er = np.absolute(E)
 
@@ -133,6 +135,4 @@ try:
     plt.close()
 finally:
     np.savetxt("field-nanoshell.txt", result, fmt = "%.5f")
-    print result
-
-
+    print(result)
